@@ -1,0 +1,73 @@
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/bin/Debug/netstandard2.0/PokeApp.deps.json
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/bin/Debug/netstandard2.0/PokeApp.dll
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/bin/Debug/netstandard2.0/ref/PokeApp.dll
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/bin/Debug/netstandard2.0/PokeApp.pdb
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/obj/Debug/netstandard2.0/PokeApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/obj/Debug/netstandard2.0/Views/Accueil.xaml.g.cs
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/obj/Debug/netstandard2.0/Views/Ajout.xaml.g.cs
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/obj/Debug/netstandard2.0/Views/Liste.xaml.g.cs
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/obj/Debug/netstandard2.0/PokeApp.AssemblyInfoInputs.cache
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/obj/Debug/netstandard2.0/PokeApp.AssemblyInfo.cs
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/obj/Debug/netstandard2.0/PokeApp.csproj.CoreCompileInputs.cache
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/obj/Debug/netstandard2.0/PokeApp.dll
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/obj/Debug/netstandard2.0/ref/PokeApp.dll
+/Users/elise/Desktop/projets etudiants/Maxime/PokeAppBis/PokeApp/obj/Debug/netstandard2.0/PokeApp.pdb
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\bin\Debug\netstandard2.0\PokeApp.deps.json
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\bin\Debug\netstandard2.0\PokeApp.dll
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\bin\Debug\netstandard2.0\ref\PokeApp.dll
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\bin\Debug\netstandard2.0\PokeApp.pdb
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\obj\Debug\netstandard2.0\PokeApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\obj\Debug\netstandard2.0\Views\Accueil.xaml.g.cs
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\obj\Debug\netstandard2.0\Views\Ajout.xaml.g.cs
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\obj\Debug\netstandard2.0\Views\Liste.xaml.g.cs
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\obj\Debug\netstandard2.0\PokeApp.AssemblyInfoInputs.cache
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\obj\Debug\netstandard2.0\PokeApp.AssemblyInfo.cs
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\obj\Debug\netstandard2.0\PokeApp.csproj.CoreCompileInputs.cache
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\obj\Debug\netstandard2.0\PokeApp.dll
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\obj\Debug\netstandard2.0\ref\PokeApp.dll
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\obj\Debug\netstandard2.0\PokeApp.pdb
+C:\Users\rodli\source\repos\PokeAppBis\PokeApp\obj\Debug\netstandard2.0\PokeApp.csproj.AssemblyReference.cache
+C:\Users\rodli\source\repos\PokeApp\PokeApp\bin\Debug\netstandard2.0\PokeApp.deps.json
+C:\Users\rodli\source\repos\PokeApp\PokeApp\bin\Debug\netstandard2.0\PokeApp.dll
+C:\Users\rodli\source\repos\PokeApp\PokeApp\bin\Debug\netstandard2.0\ref\PokeApp.dll
+C:\Users\rodli\source\repos\PokeApp\PokeApp\bin\Debug\netstandard2.0\PokeApp.pdb
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\PokeApp.csproj.AssemblyReference.cache
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\PokeApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\Views\Accueil.xaml.g.cs
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\Views\Ajout.xaml.g.cs
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\Views\Liste.xaml.g.cs
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\PokeApp.AssemblyInfoInputs.cache
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\PokeApp.AssemblyInfo.cs
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\PokeApp.csproj.CoreCompileInputs.cache
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\PokeApp.dll
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\ref\PokeApp.dll
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\PokeApp.pdb
+C:\Users\rodli\source\repos\PokeApp\PokeApp\obj\Debug\netstandard2.0\Views\DetailsPokemon.xaml.g.cs
+C:\Users\rodli\Desktop\PokeApp\PokeApp\bin\Debug\netstandard2.0\PokeApp.deps.json
+C:\Users\rodli\Desktop\PokeApp\PokeApp\bin\Debug\netstandard2.0\PokeApp.dll
+C:\Users\rodli\Desktop\PokeApp\PokeApp\bin\Debug\netstandard2.0\ref\PokeApp.dll
+C:\Users\rodli\Desktop\PokeApp\PokeApp\bin\Debug\netstandard2.0\PokeApp.pdb
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\PokeApp.csproj.AssemblyReference.cache
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\PokeApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\Views\Accueil.xaml.g.cs
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\Views\Ajout.xaml.g.cs
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\Views\DetailsPokemon.xaml.g.cs
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\Views\Liste.xaml.g.cs
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\PokeApp.AssemblyInfoInputs.cache
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\PokeApp.AssemblyInfo.cs
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\PokeApp.csproj.CoreCompileInputs.cache
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\PokeApp.dll
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\ref\PokeApp.dll
+C:\Users\rodli\Desktop\PokeApp\PokeApp\obj\Debug\netstandard2.0\PokeApp.pdb

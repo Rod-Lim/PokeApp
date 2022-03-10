@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PokeApp.Views.DetailsPokemon">
+  <ContentPage.Content>
+      <StackLayout>
+          <Label Text="{Binding Id}"/>
+          <Label Text="{Binding Name}"/>
+            <Image
+                HeightRequest="150"
+                WidthRequest="500"
+                HorizontalOptions="Start"
+                Source="{Binding Image}" />
+            <Label Text="Statistiques de base :" FontAttributes="Bold"/>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="HP : " FontAttributes="Bold"/>
+                        <Span Text="{Binding HP}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Attaque : " FontAttributes="Bold"/>
+                        <Span Text="{Binding Attack}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Defense : " FontAttributes="Bold"/>
+                        <Span Text="{Binding Defense}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Attaque spéciale : " FontAttributes="Bold"/>
+                        <Span Text="{Binding SpeAttack}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Défense spéciale : " FontAttributes="Bold"/>
+                        <Span Text="{Binding SpeDefense}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Vitesse : " FontAttributes="Bold"/>
+                        <Span Text="{Binding Speed}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
