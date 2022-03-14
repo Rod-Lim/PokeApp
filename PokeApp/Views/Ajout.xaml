@@ -4,26 +4,29 @@
              x:Class="PokeApp.Views.Ajout"
              Title="Ajouter un Pokémon">
   <ContentPage.Content>
-        <StackLayout>
-            <Entry x:Name="Name" Placeholder="Nom du Pokémon !" TextChanged="Checking"/>
-            <Entry x:Name="Image" Placeholder="Image du Pokémon !" TextChanged="Checking"/>
-            <Label x:Name="Label_HP">HP : (1)</Label>
-            <Slider x:Name="HP" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray"  ValueChanged="OnValueChanged"/>
-            <Label x:Name="Label_Attack">Attaque : (1)</Label>
-            <Slider x:Name="Attack" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
-            <Label x:Name="Label_Defense">Défense : (1)</Label>
-            <Slider x:Name="Defense" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
-            <Label x:Name="Label_SpeAttack">Attaque Spéciale : (1)</Label>
-            <Slider x:Name="SpeAttack" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
-            <Label x:Name="Label_SpeDefense">Défense Spéciale : (1)</Label>
-            <Slider x:Name="SpeDefense" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
-            <Label x:Name="Label_Speed">Vitesse : (1)</Label>
-            <Slider x:Name="Speed" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
-            <Button
+        <ScrollView>
+            <StackLayout>
+                <Entry x:Name="Name" Placeholder="Nom du Pokémon !" TextChanged="Checking"/>
+                <Image x:Name="PokemonImage"/>
+                <Button x:Name="BoutonAjoutImage" Text="Ajouter une Image" Clicked="AjoutImage"/>
+                <Label x:Name="Label_HP">HP : (1)</Label>
+                <Slider x:Name="HP" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray"  ValueChanged="OnValueChanged"/>
+                <Label x:Name="Label_Attack">Attaque : (1)</Label>
+                <Slider x:Name="Attack" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+                <Label x:Name="Label_Defense">Défense : (1)</Label>
+                <Slider x:Name="Defense" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+                <Label x:Name="Label_SpeAttack">Attaque Spéciale : (1)</Label>
+                <Slider x:Name="SpeAttack" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+                <Label x:Name="Label_SpeDefense">Défense Spéciale : (1)</Label>
+                <Slider x:Name="SpeDefense" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+                <Label x:Name="Label_Speed">Vitesse : (1)</Label>
+                <Slider x:Name="Speed" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+                <Button
                 x:Name="AddPokemon"
                 Text="Ajouter mon pokémon !" 
                 Clicked="OnButtonClicked"
                 IsEnabled="False"/>
-        </StackLayout>
-  </ContentPage.Content>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

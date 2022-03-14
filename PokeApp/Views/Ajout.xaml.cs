@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 using PokeApp.Models;
 using SQLite;
 using Xamarin.Forms;
@@ -20,7 +22,7 @@ namespace PokeApp.Views
 
         void Checking(object sender, EventArgs args)
         {
-            if (Name.Text != "" && Image.Text != "")
+            if (Name.Text != "" && PokemonImage.Source != null)
             {
                 AddPokemon.IsEnabled = true;
             } else
@@ -58,20 +60,66 @@ namespace PokeApp.Views
         }
         async void OnButtonClicked(object sender, EventArgs args)
         {
-            var pokemon = new MyPokemon();
-            pokemon.Name = Name.Text;
-            pokemon.Image = Image.Text;
-            pokemon.HP = (int)HP.Value;
-            pokemon.Attack = (int)Attack.Value;
-            pokemon.Defense = (int)Defense.Value;
-            pokemon.SpeAttack = (int)SpeAttack.Value;
-            pokemon.SpeDefense = (int)SpeDefense.Value;
-            pokemon.Speed = (int)Speed.Value;
+            var pokemon = new MyPokemon
+            {
+                Name = Name.Text,
+                Image = PokemonImage.Source.ToString().Split(' ')[1],
+                HP = (int)HP.Value,
+                Attack = (int)Attack.Value,
+                Defense = (int)Defense.Value,
+                SpeAttack = (int)SpeAttack.Value,
+                SpeDefense = (int)SpeDefense.Value,
+                Speed = (int)Speed.Value
+            };
 
             PokemonDatabase database = await PokemonDatabase.Instance;
             await database.SaveItemAsync(pokemon);
 
+            Name.Text = "";
+            PokemonImage.Source = null;
+            BoutonAjoutImage.Text = "Ajouter une Image";
+            Label_HP.Text = "HP : (1)";
+            Label_Attack.Text = "Attaque : (1)";
+            Label_Defense.Text = "Défense : (1)";
+            Label_SpeAttack.Text = "Attaque Spéciale : (1)";
+            Label_SpeDefense.Text = "Défense Spéciale : (1)";
+            Label_Speed.Text = "Vitesse : (1)";
+            HP.Value = 1;
+            Attack.Value = 1;
+            Defense.Value = 1;
+            SpeAttack.Value = 1;
+            SpeDefense.Value = 1;
+            Speed.Value = 1;
+            AddPokemon.IsEnabled = false;
+
             await Navigation.PushAsync(new DetailsPokemon(await database.GetItemAsync(pokemon.Id)));
+        }
+
+        async void AjoutImage(object sender, EventArgs e)
+        {
+            await CrossMedia.Current.Initialize();
+
+            if (!CrossMedia.Current.IsPickPhotoSupported)
+            {
+                await DisplayAlert("Non supporté", "Votre telephone ne " +
+                    "supporte pas cette fonctionnalitée", "Ok");
+                return;
+            }
+
+            var mediaOptions = new PickMediaOptions
+            {
+                PhotoSize = PhotoSize.Full,
+                CompressionQuality = 40
+            };
+
+            var selectedImageFile = await CrossMedia.Current.PickPhotoAsync(mediaOptions);
+
+            if (selectedImageFile != null)
+            {
+                PokemonImage.Source = ImageSource.FromFile(selectedImageFile.Path);
+                BoutonAjoutImage.Text = "Changer l'Image"; 
+                Checking(sender, e);
+            }
         }
     }
 }
