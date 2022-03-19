@@ -4,16 +4,20 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:PokeApp.Views"
-    BackgroundColor="OrangeRed">
+    BackgroundColor="OrangeRed"
+    Title="MainPage">
     <TabBar>
         <Tab Title="Accueil" Icon="Pokeball.png">
             <views:Accueil />
         </Tab>
-        <Tab Title="Liste" Icon="Pokedex.png">
-            <views:Liste />
+        <Tab Title="Équipe" Icon="Pokedex.png">
+            <views:Team />
         </Tab>
         <Tab Title="Ajout" Icon="Add.png">
             <views:Ajout />
+        </Tab>
+        <Tab Title="Pokédex" Icon="Pokedex.png">
+            <views:Pokedex />
         </Tab>
     </TabBar>
 </Shell>

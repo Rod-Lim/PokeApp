@@ -15,14 +15,25 @@ namespace PokeApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Ajout : ContentPage
     {
+        string[] types = { "Acier","Combat","Dragon",
+                           "Électrique","Fée","Feu",
+                           "Glace","Insecte","Normal",
+                           "Plante","Psy","Roche","Sol",
+                           "Spectre","Ténèbres","Vol" };
+
         public Ajout()
         {
             InitializeComponent();
+            foreach (string type in types)
+            {
+                PickerType1.Items.Add(type);
+                PickerType2.Items.Add(type);
+            }
         }
 
         void Checking(object sender, EventArgs args)
         {
-            if (Name.Text != "" && PokemonImage.Source != null)
+            if (Name.Text != "" && PokemonImage.Source != null && PickerType1.SelectedIndex != -1)
             {
                 AddPokemon.IsEnabled = true;
             } else
@@ -62,7 +73,8 @@ namespace PokeApp.Views
         {
             var pokemon = new MyPokemon
             {
-                Name = Name.Text,
+                Name = Name.Text[0].ToString().ToUpper() + Name.Text.Substring(1),
+                Type1 = PickerType1.SelectedItem.ToString(),
                 Image = PokemonImage.Source.ToString().Split(' ')[1],
                 HP = (int)HP.Value,
                 Attack = (int)Attack.Value,
@@ -71,11 +83,18 @@ namespace PokeApp.Views
                 SpeDefense = (int)SpeDefense.Value,
                 Speed = (int)Speed.Value
             };
+            if (PickerType2.SelectedIndex != -1)
+            {
+                pokemon.Type2 = PickerType2.SelectedItem.ToString();
+            }
 
             PokemonDatabase database = await PokemonDatabase.Instance;
             await database.SaveItemAsync(pokemon);
 
+            //Reset de tous les champs pour l'ajout
             Name.Text = "";
+            PickerType1.SelectedIndex = -1;
+            PickerType2.SelectedIndex = -1;
             PokemonImage.Source = null;
             BoutonAjoutImage.Text = "Ajouter une Image";
             Label_HP.Text = "HP : (1)";
@@ -92,7 +111,8 @@ namespace PokeApp.Views
             Speed.Value = 1;
             AddPokemon.IsEnabled = false;
 
-            await Navigation.PushAsync(new DetailsPokemon(await database.GetItemAsync(pokemon.Id)));
+            //Ajout du pokémon dans l'équipe
+            await Navigation.PushAsync(new DetailsPokemon(await database.GetItemAsync(pokemon.Id),false));
         }
 
         async void AjoutImage(object sender, EventArgs e)

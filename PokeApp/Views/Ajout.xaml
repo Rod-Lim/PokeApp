@@ -7,20 +7,41 @@
         <ScrollView>
             <StackLayout>
                 <Entry x:Name="Name" Placeholder="Nom du Pokémon !" TextChanged="Checking"/>
+                <Grid>
+                    <Picker Title="Type n°1 (Obligatoire)"
+                        x:Name="PickerType1"
+                        Grid.Column="0"
+                        VerticalOptions="CenterAndExpand"
+                        SelectedIndexChanged="Checking"
+                        />
+                    <Picker Title="Type n°2 (Optionnel)" 
+                        x:Name="PickerType2"
+                        Grid.Column="1"
+                        VerticalOptions="CenterAndExpand"
+                        />
+                </Grid>
                 <Image x:Name="PokemonImage"/>
                 <Button x:Name="BoutonAjoutImage" Text="Ajouter une Image" Clicked="AjoutImage"/>
-                <Label x:Name="Label_HP">HP : (1)</Label>
-                <Slider x:Name="HP" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray"  ValueChanged="OnValueChanged"/>
-                <Label x:Name="Label_Attack">Attaque : (1)</Label>
-                <Slider x:Name="Attack" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
-                <Label x:Name="Label_Defense">Défense : (1)</Label>
-                <Slider x:Name="Defense" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
-                <Label x:Name="Label_SpeAttack">Attaque Spéciale : (1)</Label>
-                <Slider x:Name="SpeAttack" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
-                <Label x:Name="Label_SpeDefense">Défense Spéciale : (1)</Label>
-                <Slider x:Name="SpeDefense" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
-                <Label x:Name="Label_Speed">Vitesse : (1)</Label>
-                <Slider x:Name="Speed" Maximum="300" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+                
+                <Grid>
+                    <Label Grid.Column="0" Grid.Row="0" x:Name="Label_HP">HP : (1)</Label>
+                    <Slider Grid.Column="0" Grid.Row="1" x:Name="HP" Maximum="255" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray"  ValueChanged="OnValueChanged"/>
+
+                    <Label Grid.Column="1"  Grid.Row="0" x:Name="Label_Attack">Attaque : (1)</Label>
+                    <Slider Grid.Column="1"  Grid.Row="1" x:Name="Attack" Maximum="255" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+
+                    <Label Grid.Column="0"  Grid.Row="2" x:Name="Label_Defense">Défense : (1)</Label>
+                    <Slider Grid.Column="0"  Grid.Row="3" x:Name="Defense" Maximum="255" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+
+                    <Label Grid.Column="1"  Grid.Row="2" x:Name="Label_SpeAttack">Attaque Spéciale : (1)</Label>
+                    <Slider Grid.Column="1"  Grid.Row="3" x:Name="SpeAttack" Maximum="255" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+
+                    <Label Grid.Column="0"  Grid.Row="4" x:Name="Label_SpeDefense">Défense Spéciale : (1)</Label>
+                    <Slider Grid.Column="0"  Grid.Row="5" x:Name="SpeDefense" Maximum="255" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+
+                    <Label Grid.Column="1"  Grid.Row="4" x:Name="Label_Speed">Vitesse : (1)</Label>
+                    <Slider Grid.Column="1"  Grid.Row="5" x:Name="Speed" Maximum="255" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+                </Grid>
                 <Button
                 x:Name="AddPokemon"
                 Text="Ajouter mon pokémon !" 

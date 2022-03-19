@@ -1,5 +1,4 @@
-﻿//using PokeApp.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -29,13 +28,13 @@ namespace PokeApp.ViewModels
         {
             PokeApiClient pokeClient = new PokeApiClient();
 
-            for (int i = 1; i <= 151; i++)
+            for (int i = 1; i <= 898; i++)
             {
                 Pokemon pokemon = await Task.Run(() => pokeClient.GetResourceAsync<Pokemon>(i));
 
                 MyPokemon myPokemon = new MyPokemon();
                 myPokemon.Id = pokemon.Id;
-                myPokemon.Name = pokemon.Name;
+                myPokemon.Name = pokemon.Name[0].ToString().ToUpper() + pokemon.Name.Substring(1);
                 myPokemon.Image = pokemon.Sprites.FrontDefault;
                 myPokemon.HP = pokemon.Stats[0].BaseStat;
                 myPokemon.Attack = pokemon.Stats[1].BaseStat;
@@ -43,9 +42,15 @@ namespace PokeApp.ViewModels
                 myPokemon.SpeAttack = pokemon.Stats[3].BaseStat;
                 myPokemon.SpeDefense = pokemon.Stats[4].BaseStat;
                 myPokemon.Speed = pokemon.Stats[5].BaseStat;
-
+                    myPokemon.Type1 = pokemon.Types[0].Type.Name.ToString();
+                if (pokemon.Types.Count == 2)
+                {
+                    myPokemon.Type2 = pokemon.Types[1].Type.Name.ToString();
+                } else
+                {
+                    myPokemon.Type2 = "";
+                }
                 PokemonsList.Add(myPokemon);
-
             }
         }
     }

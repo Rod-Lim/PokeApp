@@ -1,11 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PokeApp.Views.DetailsPokemon">
+             x:Class="PokeApp.Views.DetailsPokemon"
+             Title="DetailsPokemon">
   <ContentPage.Content>
-      <StackLayout>
-          <Label Text="{Binding Id}"/>
+      <StackLayout x:Name="Body">
+          <Label x:Name="Id" Text="{Binding Id}"/>
           <Label Text="{Binding Name}"/>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Types : " FontAttributes="Bold"/>
+                        <Span Text="{Binding Type1}"/>
+                        <Span Text=" "/>
+                        <Span Text="{Binding Type2}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
             <Image
                 HeightRequest="150"
                 WidthRequest="500"

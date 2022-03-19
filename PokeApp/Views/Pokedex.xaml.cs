@@ -9,9 +9,9 @@ using System.Linq;
 
 namespace PokeApp.Views
 {
-    public partial class Liste : ContentPage
+    public partial class Pokedex : ContentPage
     {
-        public Liste()
+        public Pokedex()
         {
             InitializeComponent();
             BindingContext = PokemonListViewModel.Instance;
@@ -25,7 +25,12 @@ namespace PokeApp.Views
                 return;
             }
             (sender as CollectionView).SelectedItem = null;
-            await Navigation.PushAsync(new DetailsPokemon(current));   
+            await Navigation.PushAsync(new DetailsPokemon(current,false));   
+        }
+
+        private void OnSearch(object sender, TextChangedEventArgs e)
+        {
+            PokemonsList.ItemsSource = PokemonListViewModel.Instance.PokemonsList.Where(s => s.Name.ToLower().StartsWith(e.NewTextValue.ToLower()));
         }
     }
 }

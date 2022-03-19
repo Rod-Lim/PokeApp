@@ -8,25 +8,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("PokeApp.Views.DetailsPokemon.xaml", "Views/DetailsPokemon.xaml", typeof(global::PokeApp.Views.DetailsPokemon))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("PokeApp.Views.Pokedex.xaml", "Views/Pokedex.xaml", typeof(global::PokeApp.Views.Pokedex))]
 
 namespace PokeApp.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\DetailsPokemon.xaml")]
-    public partial class DetailsPokemon : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Pokedex.xaml")]
+    public partial class Pokedex : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.StackLayout Body;
+        private global::Xamarin.Forms.SearchBar SearchBar;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label Id;
+        private global::Xamarin.Forms.CollectionView PokemonsList;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(DetailsPokemon));
-            Body = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "Body");
-            Id = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "Id");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Pokedex));
+            SearchBar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.SearchBar>(this, "SearchBar");
+            PokemonsList = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CollectionView>(this, "PokemonsList");
         }
     }
 }

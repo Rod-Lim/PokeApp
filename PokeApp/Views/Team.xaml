@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="PokeApp.Views.Team"
+    Title="Mon équipe"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="Transparent" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="SearchBar" 
+                       TextChanged="OnSearch"
+                       Placeholder="Rechercher un Pokemon dans l'équipe..."
+                       CancelButtonColor="White"
+                       PlaceholderColor="White"
+                       TextColor="White"
+                       TextTransform="Lowercase"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Medium"
+                       BackgroundColor="Orange"/>
+            <CollectionView ItemsSource="{Binding TeamList}"
+                        SelectionMode="Single"
+                        SelectionChanged="OnCollectionViewSelectionChanged"
+                        x:Name="TeamList">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                        Span="4" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            CornerRadius="30"  
+                            OutlineColor="Gray" 
+                            Padding="0">
+                            <StackLayout Padding="10,10,10,10">
+                                <Image
+                                    HeightRequest="75"
+                                    HorizontalOptions="Start"
+                                    Source="{Binding Image}" />
+                                <Label Text="{Binding Name}" 
+                                    TextColor="Black" 
+                                    HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+     </ContentPage.Content>
+</ContentPage>

@@ -50,6 +50,5 @@ namespace PokeApp
         {
             return Database.DeleteAsync(pokemon);
         }
-
     }
 }
