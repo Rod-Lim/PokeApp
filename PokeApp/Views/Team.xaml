@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
-    x:Class="PokeApp.Views.Team"
-    Title="Mon équipe"
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+<ContentPage x:Class="PokeApp.Views.Team"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Mon équipe">
     <ContentPage.Resources>
         <Style TargetType="Grid">
             <Setter Property="VisualStateManager.VisualStateGroups">
@@ -23,40 +22,40 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <SearchBar x:Name="SearchBar" 
-                       TextChanged="OnSearch"
-                       Placeholder="Rechercher un Pokemon dans l'équipe..."
+            <SearchBar x:Name="SearchBar"
+                       BackgroundColor="Orange" 
                        CancelButtonColor="White"
-                       PlaceholderColor="White"
-                       TextColor="White"
-                       TextTransform="Lowercase"
-                       HorizontalTextAlignment="Center"
                        FontSize="Medium"
-                       BackgroundColor="Orange"/>
-            <CollectionView ItemsSource="{Binding TeamList}"
-                        SelectionMode="Single"
-                        SelectionChanged="OnCollectionViewSelectionChanged"
-                        x:Name="TeamList">
+                       HorizontalTextAlignment="Center"
+                       Placeholder="Rechercher un Pokemon dans l'équipe..."
+                       PlaceholderColor="White"
+                       TextChanged="OnSearch"
+                       TextColor="White"
+                       TextTransform="Lowercase"/>
+            <CollectionView x:Name="TeamList"
+                            ItemsSource="{Binding TeamList}"
+                            SelectionMode="Single"
+                            SelectionChanged="OnCollectionViewSelectionChanged">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical"
-                        Span="4" />
+                                     Span="4"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame
-                            CornerRadius="30"  
-                            OutlineColor="Gray" 
-                            Padding="0">
-                            <StackLayout Padding="10,10,10,10">
-                                <Image
-                                    HeightRequest="75"
-                                    HorizontalOptions="Start"
-                                    Source="{Binding Image}" />
-                                <Label Text="{Binding Name}" 
-                                    TextColor="Black" 
-                                    HorizontalOptions="Center"/>
-                            </StackLayout>
-                        </Frame>
+                        <StackLayout Padding="3">
+                            <Frame CornerRadius="20"  
+                                   OutlineColor="Gray" 
+                                   Padding="0">
+                                <StackLayout Padding="10,10,10,10">
+                                    <Image HeightRequest="75"
+                                           HorizontalOptions="Start"
+                                           Source="{Binding Image}" />
+                                    <Label HorizontalOptions="Center"
+                                           Text="{Binding Name}" 
+                                           TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

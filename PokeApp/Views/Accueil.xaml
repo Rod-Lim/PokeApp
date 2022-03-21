@@ -6,9 +6,12 @@
     <ContentPage.Content>
         <StackLayout>
             <Image Source="logo.png"/>
-            <Label Text="Bonjour, ceci l'application des Pokémon ! Ici, il est possible de faire pleiiiin de trucs trop cools."
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" WidthRequest="250" HeightRequest="400" TextColor="Black"/>
+            <Label HeightRequest="400" 
+                   HorizontalOptions="CenterAndExpand"   
+                   Text="Bonjour, ceci l'application des Pokémon ! Ici, il est possible de faire pleiiiin de trucs trop cools comme créer ses propres Pokémon ou consulter tout le Pokédex !"
+                   TextColor="Black"
+                   WidthRequest="250"
+                   VerticalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,22 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Shell
-    x:Class="PokeApp.MainPage"
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:views="clr-namespace:PokeApp.Views"
-    BackgroundColor="OrangeRed"
-    Title="MainPage">
+<Shell x:Class="PokeApp.MainPage"
+       xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:PokeApp.Views"
+       BackgroundColor="OrangeRed"
+       Title="MainPage">
     <TabBar>
-        <Tab Title="Accueil" Icon="Pokeball.png">
+        <Tab Icon="Pokeball.png"
+             Title="Accueil">
             <views:Accueil />
         </Tab>
-        <Tab Title="Équipe" Icon="Pokedex.png">
+        <Tab Title="Équipe"
+             Icon="Pokedex.png">
             <views:Team />
         </Tab>
-        <Tab Title="Ajout" Icon="Add.png">
+        <Tab Title="Ajout"
+             Icon="Add.png">
             <views:Ajout />
         </Tab>
-        <Tab Title="Pokédex" Icon="Pokedex.png">
+        <Tab Title="Pokédex"
+             Icon="Pokedex.png">
             <views:Pokedex />
         </Tab>
     </TabBar>

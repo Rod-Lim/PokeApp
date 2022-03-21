@@ -6,47 +6,109 @@
   <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Entry x:Name="Name" Placeholder="Nom du Pokémon !" TextChanged="Checking"/>
+                <Entry x:Name="Name" 
+                       Placeholder="Nom du Pokémon !" 
+                       TextChanged="Checking"/>
                 <Grid>
-                    <Picker Title="Type n°1 (Obligatoire)"
-                        x:Name="PickerType1"
-                        Grid.Column="0"
-                        VerticalOptions="CenterAndExpand"
-                        SelectedIndexChanged="Checking"
-                        />
-                    <Picker Title="Type n°2 (Optionnel)" 
-                        x:Name="PickerType2"
-                        Grid.Column="1"
-                        VerticalOptions="CenterAndExpand"
-                        />
+                    <Picker x:Name="PickerType1" 
+                            Grid.Column="0"
+                            SelectedIndexChanged="Checking"
+                            Title="Type n°1 (Obligatoire)"
+                            VerticalOptions="CenterAndExpand"/>
+
+                    <Picker x:Name="PickerType2"
+                            Grid.Column="1"
+                            Title="Type n°2 (Optionnel)" 
+                            VerticalOptions="CenterAndExpand"/>
                 </Grid>
                 <Image x:Name="PokemonImage"/>
-                <Button x:Name="BoutonAjoutImage" Text="Ajouter une Image" Clicked="AjoutImage"/>
+                <Button x:Name="BoutonAjoutImage"
+                        Clicked="AjoutImage"
+                        Text="Ajouter une Image"/>
                 
                 <Grid>
-                    <Label Grid.Column="0" Grid.Row="0" x:Name="Label_HP">HP : (1)</Label>
-                    <Slider Grid.Column="0" Grid.Row="1" x:Name="HP" Maximum="255" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray"  ValueChanged="OnValueChanged"/>
+                    <Label x:Name="Label_HP" 
+                           Grid.Column="0" 
+                           Grid.Row="0"
+                           Text="HP : (1)"/>
+                    <Slider x:Name="HP"
+                            Grid.Column="0" 
+                            Grid.Row="1"  
+                            Maximum="255"
+                            MaximumTrackColor="Black"
+                            Minimum="1"  
+                            MinimumTrackColor="Gray"  
+                            ValueChanged="OnValueChanged"/>
 
-                    <Label Grid.Column="1"  Grid.Row="0" x:Name="Label_Attack">Attaque : (1)</Label>
-                    <Slider Grid.Column="1"  Grid.Row="1" x:Name="Attack" Maximum="255" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+                    <Label x:Name="Label_Attack"
+                           Grid.Column="1"  
+                           Grid.Row="0" 
+                           Text="Attaque : (1)"/>
+                    <Slider x:Name="Attack"
+                            Grid.Column="1"  
+                            Grid.Row="1"  
+                            Maximum="255" 
+                            MaximumTrackColor="Black" 
+                            Minimum="1" 
+                            MinimumTrackColor="Gray" 
+                            ValueChanged="OnValueChanged"/>
 
-                    <Label Grid.Column="0"  Grid.Row="2" x:Name="Label_Defense">Défense : (1)</Label>
-                    <Slider Grid.Column="0"  Grid.Row="3" x:Name="Defense" Maximum="255" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+                    <Label x:Name="Label_Defense"
+                           Grid.Column="0"  
+                           Grid.Row="2" 
+                           Text="Défense : (1)"/>
+                    <Slider x:Name="Defense"
+                            Grid.Column="0"  
+                            Grid.Row="3"  
+                            Maximum="255" 
+                            MaximumTrackColor="Black" 
+                            Minimum="1" 
+                            MinimumTrackColor="Gray" 
+                            ValueChanged="OnValueChanged"/>
 
-                    <Label Grid.Column="1"  Grid.Row="2" x:Name="Label_SpeAttack">Attaque Spéciale : (1)</Label>
-                    <Slider Grid.Column="1"  Grid.Row="3" x:Name="SpeAttack" Maximum="255" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+                    <Label x:Name="Label_SpeAttack"
+                           Grid.Column="1"  
+                           Grid.Row="2" 
+                           Text="Attaque Spéciale : (1)"/>
+                    <Slider x:Name="SpeAttack"
+                            Grid.Column="1"  
+                            Grid.Row="3"  
+                            Maximum="255" 
+                            MaximumTrackColor="Black" 
+                            Minimum="1" 
+                            MinimumTrackColor="Gray" 
+                            ValueChanged="OnValueChanged"/>
 
-                    <Label Grid.Column="0"  Grid.Row="4" x:Name="Label_SpeDefense">Défense Spéciale : (1)</Label>
-                    <Slider Grid.Column="0"  Grid.Row="5" x:Name="SpeDefense" Maximum="255" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+                    <Label x:Name="Label_SpeDefense"
+                           Grid.Column="0"  
+                           Grid.Row="4" 
+                           Text="Défense Spéciale : (1)"/>
+                    <Slider x:Name="SpeDefense"
+                            Grid.Column="0"  
+                            Grid.Row="5"  
+                            Maximum="255" 
+                            MaximumTrackColor="Black" 
+                            Minimum="1" 
+                            MinimumTrackColor="Gray" 
+                            ValueChanged="OnValueChanged"/>
 
-                    <Label Grid.Column="1"  Grid.Row="4" x:Name="Label_Speed">Vitesse : (1)</Label>
-                    <Slider Grid.Column="1"  Grid.Row="5" x:Name="Speed" Maximum="255" Minimum="1" MaximumTrackColor="Black" MinimumTrackColor="Gray" ValueChanged="OnValueChanged"/>
+                    <Label x:Name="Label_Speed" 
+                           Grid.Column="1" 
+                           Grid.Row="4" 
+                           Text="Vitesse : (1)"/>
+                    <Slider x:Name="Speed"
+                            Grid.Column="1"  
+                            Grid.Row="5"  
+                            Maximum="255" 
+                            MaximumTrackColor="Black" 
+                            Minimum="1" 
+                            MinimumTrackColor="Gray" 
+                            ValueChanged="OnValueChanged"/>
                 </Grid>
-                <Button
-                x:Name="AddPokemon"
-                Text="Ajouter mon pokémon !" 
-                Clicked="OnButtonClicked"
-                IsEnabled="False"/>
+                <Button x:Name="AddPokemon"
+                        Clicked="OnButtonClicked"
+                        IsEnabled="False"
+                        Text="Ajouter mon pokémon !"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

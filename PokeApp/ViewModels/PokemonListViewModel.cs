@@ -8,8 +8,12 @@ using PokeApp.Models;
 
 namespace PokeApp.ViewModels
 {
+    /* Classe PokemonListViewModel
+    ** Cette classe est un ViewModel et va gérer le contenu de la View Pokedex. */
     public class PokemonListViewModel : BaseViewModel
     {       
+        /* Variable PokemonsList de type ObservableCollection<MyPokemon>
+        ** Cette variable contiendra la liste des 898 Pokémon du Pokédex. */
         public ObservableCollection<MyPokemon> PokemonsList
         {
             get { return GetValue<ObservableCollection<MyPokemon>>(); }
@@ -18,12 +22,16 @@ namespace PokeApp.ViewModels
         private static PokemonListViewModel _instance = new PokemonListViewModel();
         public static PokemonListViewModel Instance { get { return _instance; } }
 
+        /* Constructeur de la classe
+        ** Initialise le champ PokemonsList et utilise la procédure LinkApi() pour le remplir. */
         public PokemonListViewModel()
         {
             PokemonsList = new ObservableCollection<MyPokemon>();
             LinkApi();
         }
 
+        /* Procédure LinkApi()
+        ** Cette procédure prends les 898 Pokémon existants dans la PokeAPI, en récupère les données correspondantes à la classe MyPokemon et les mets dans la variable PokemonsList. */
         async void LinkApi()
         {
             PokeApiClient pokeClient = new PokeApiClient();
@@ -32,17 +40,19 @@ namespace PokeApp.ViewModels
             {
                 Pokemon pokemon = await Task.Run(() => pokeClient.GetResourceAsync<Pokemon>(i));
 
-                MyPokemon myPokemon = new MyPokemon();
-                myPokemon.Id = pokemon.Id;
-                myPokemon.Name = pokemon.Name[0].ToString().ToUpper() + pokemon.Name.Substring(1);
-                myPokemon.Image = pokemon.Sprites.FrontDefault;
-                myPokemon.HP = pokemon.Stats[0].BaseStat;
-                myPokemon.Attack = pokemon.Stats[1].BaseStat;
-                myPokemon.Defense = pokemon.Stats[2].BaseStat;
-                myPokemon.SpeAttack = pokemon.Stats[3].BaseStat;
-                myPokemon.SpeDefense = pokemon.Stats[4].BaseStat;
-                myPokemon.Speed = pokemon.Stats[5].BaseStat;
-                    myPokemon.Type1 = pokemon.Types[0].Type.Name.ToString();
+                MyPokemon myPokemon = new MyPokemon
+                {
+                    Id = pokemon.Id,
+                    Name = pokemon.Name[0].ToString().ToUpper() + pokemon.Name.Substring(1),
+                    Image = pokemon.Sprites.FrontDefault,
+                    HP = pokemon.Stats[0].BaseStat,
+                    Attack = pokemon.Stats[1].BaseStat,
+                    Defense = pokemon.Stats[2].BaseStat,
+                    SpeAttack = pokemon.Stats[3].BaseStat,
+                    SpeDefense = pokemon.Stats[4].BaseStat,
+                    Speed = pokemon.Stats[5].BaseStat,
+                    Type1 = pokemon.Types[0].Type.Name.ToString()
+                };
                 if (pokemon.Types.Count == 2)
                 {
                     myPokemon.Type2 = pokemon.Types[1].Type.Name.ToString();

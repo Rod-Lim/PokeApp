@@ -5,28 +5,31 @@
              Title="DetailsPokemon">
   <ContentPage.Content>
       <StackLayout x:Name="Body">
-          <Label x:Name="Id" Text="{Binding Id}"/>
+          <Label x:Name="Id" 
+                 Text="{Binding Id}"/>
           <Label Text="{Binding Name}"/>
             <Label>
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Types : " FontAttributes="Bold"/>
+                        <Span FontAttributes="Bold"
+                              Text="Types : "/>
                         <Span Text="{Binding Type1}"/>
                         <Span Text=" "/>
                         <Span Text="{Binding Type2}"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Image
-                HeightRequest="150"
-                WidthRequest="500"
-                HorizontalOptions="Start"
-                Source="{Binding Image}" />
-            <Label Text="Statistiques de base :" FontAttributes="Bold"/>
+            <Image HeightRequest="150"
+                   HorizontalOptions="Start"
+                   WidthRequest="500"                
+                   Source="{Binding Image}"/>
+            <Label FontAttributes="Bold"
+                   Text="Statistiques de base :"/>
             <Label>
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="HP : " FontAttributes="Bold"/>
+                        <Span FontAttributes="Bold"
+                              Text="HP : "/>
                         <Span Text="{Binding HP}"/>
                     </FormattedString>
                 </Label.FormattedText>
@@ -34,7 +37,8 @@
             <Label>
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Attaque : " FontAttributes="Bold"/>
+                        <Span FontAttributes="Bold"
+                              Text="Attaque : "/>
                         <Span Text="{Binding Attack}"/>
                     </FormattedString>
                 </Label.FormattedText>
@@ -42,7 +46,8 @@
             <Label>
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Defense : " FontAttributes="Bold"/>
+                        <Span FontAttributes="Bold"
+                              Text="Defense : "/>
                         <Span Text="{Binding Defense}"/>
                     </FormattedString>
                 </Label.FormattedText>
@@ -50,7 +55,8 @@
             <Label>
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Attaque spéciale : " FontAttributes="Bold"/>
+                        <Span FontAttributes="Bold"
+                              Text="Attaque spéciale : "/>
                         <Span Text="{Binding SpeAttack}"/>
                     </FormattedString>
                 </Label.FormattedText>
@@ -58,7 +64,8 @@
             <Label>
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Défense spéciale : " FontAttributes="Bold"/>
+                        <Span FontAttributes="Bold"
+                              Text="Défense spéciale : "/>
                         <Span Text="{Binding SpeDefense}"/>
                     </FormattedString>
                 </Label.FormattedText>
@@ -66,7 +73,8 @@
             <Label>
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Vitesse : " FontAttributes="Bold"/>
+                        <Span FontAttributes="Bold"
+                              Text="Vitesse : "/>
                         <Span Text="{Binding Speed}"/>
                     </FormattedString>
                 </Label.FormattedText>

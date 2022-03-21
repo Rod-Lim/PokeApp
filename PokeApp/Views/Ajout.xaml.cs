@@ -13,14 +13,16 @@ using Xamarin.Forms.Xaml;
 namespace PokeApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+    // Classe de la page d'ajout.
     public partial class Ajout : ContentPage
     {
-        string[] types = { "Acier","Combat","Dragon",
-                           "Électrique","Fée","Feu",
+        // Définition du tableau dans lequel sera récupéré les string des différents types possible à ajouter
+        readonly string[] types = { "Acier","Combat","Dragon",
+                           "Électrique","Eau","Fée","Feu",
                            "Glace","Insecte","Normal",
-                           "Plante","Psy","Roche","Sol",
+                           "Plante","Poison","Psy","Roche","Sol",
                            "Spectre","Ténèbres","Vol" };
-
+        // Constructeur de la classe initialisant la page , il remplit également les deux Picker pour les types avec les données de la variable déclarée ci-dessus.
         public Ajout()
         {
             InitializeComponent();
@@ -31,6 +33,10 @@ namespace PokeApp.Views
             }
         }
 
+        /* Procédure Checking
+        ** Cette procédure est appelée à chaque fois que le nom, l'image ou le type (obligatoire) du Pokémon est modifié par l'utilisteur (lors de l'ajout). 
+        ** Elle permet de vérifier que ces champs sont bien remplis et, le cas échéant, elle active le bouton pour valider l'ajout, de manière à ce que l'utilisateur puisse cliquer dessus.
+        ** A contrario, si le bouton a déjà été activé, elle le désactive si un des 3 "champs" est vidé par l'utilisateur. */
         void Checking(object sender, EventArgs args)
         {
             if (Name.Text != "" && PokemonImage.Source != null && PickerType1.SelectedIndex != -1)
@@ -42,6 +48,9 @@ namespace PokeApp.Views
             }
         }
 
+        /* Procédure OnValueChanged
+        ** Cette procédure est appelée lors d'un changement sur n'importe lequel des Slider correspondant aux 6 statistiques du Pokémon (lors de l'ajout) par l'utilisateur.
+        ** Elle permet de modifier l'affichage de la valeur du Slider qui est en train d'être modifié afin de voir quelle est la valeur que l'on va définir. */
         void OnValueChanged(object sender, EventArgs args)
         {
             if (sender == HP)
@@ -69,6 +78,11 @@ namespace PokeApp.Views
                 Label_Speed.Text = "Vitesse : (" + ((int)((Slider)sender).Value).ToString() + ")";
             }
         }
+
+        /* Procédure OnButtonClicked
+        ** Cette procédure est appelée lors d'un clique sur le bouton pour valider l'ajout.
+        ** Elle permet d'ajouter un Pokémon dans la base de données de l'équipe en récupérant les valeurs saisies par l'utilisateur.
+        ** Elle remet également tous les champs de l'ajout "à zéro" (à leur valeurs par défaut) et affiche les détails du pokémon créé. */
         async void OnButtonClicked(object sender, EventArgs args)
         {
             var pokemon = new MyPokemon
@@ -115,6 +129,10 @@ namespace PokeApp.Views
             await Navigation.PushAsync(new DetailsPokemon(await database.GetItemAsync(pokemon.Id),false));
         }
 
+        /* Procédure AjoutImage
+        ** Procédure appelée lors de l'ajout d'une image via un bouton.
+        ** A l'aide du nuget Xam.Plugin.Media, cette procédure ouvre la galerie du téléphone afin que l'utilisateur puisse choisir une image pour son Pokémon.
+        ** Elle affiche ensuite l'image au dessus du bouton qui l'a appelée, puis appelle la fonction Checking() (voir plus haut) lorsqu'une image est choisie. */
         async void AjoutImage(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();

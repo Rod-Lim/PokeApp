@@ -5,6 +5,7 @@ using System.Text;
 
 namespace PokeApp
 {
+    // Classe Constants (elle définie des constantes, notemment relatives à tout ce qui est base de données)
     public static class Constants
     {
         public const string DatabaseFilename = "Team.db3";

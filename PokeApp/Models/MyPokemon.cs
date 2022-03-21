@@ -6,6 +6,9 @@ using SQLite;
 
 namespace PokeApp.Models
 {
+    /* Classe MyPokemon
+    ** C'est la classe à laquelle est associée tous nos pokémon, ceux qui proviennent de la PokeApi ainsi que ceux créés par l'utilisateur.
+    ** Ces derniers son également dans une base de données de la même forme que la classe, avec l'ID en PrimaryKey et AutoIncrement. */ 
     [Table("Pokemons")]
     public class MyPokemon
     {
