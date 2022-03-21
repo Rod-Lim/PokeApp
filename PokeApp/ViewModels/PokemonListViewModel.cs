@@ -51,11 +51,11 @@ namespace PokeApp.ViewModels
                     SpeAttack = pokemon.Stats[3].BaseStat,
                     SpeDefense = pokemon.Stats[4].BaseStat,
                     Speed = pokemon.Stats[5].BaseStat,
-                    Type1 = pokemon.Types[0].Type.Name.ToString()
+                    Type1 = pokemon.Types[0].Type.Name[0].ToString().ToUpper() + pokemon.Types[0].Type.Name.Substring(1)
                 };
                 if (pokemon.Types.Count == 2)
                 {
-                    myPokemon.Type2 = pokemon.Types[1].Type.Name.ToString();
+                    myPokemon.Type2 = pokemon.Types[1].Type.Name[0].ToString().ToUpper() + pokemon.Types[1].Type.Name.Substring(1);
                 } else
                 {
                     myPokemon.Type2 = "";

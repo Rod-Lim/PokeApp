@@ -26,14 +26,22 @@ namespace PokeApp.Views
             if (fromEquipe) {
                 Button boutonSupprimer = new Button
                 {
-                    Text = "Supprimer le Pokémon de l'Équipe",
-                    VerticalOptions = LayoutOptions.CenterAndExpand,
                     BackgroundColor = Color.Red,
+                    Margin = 10,
+                    Text = "Supprimer le Pokémon de l'Équipe",
                     TextColor = Color.White,
+                    VerticalOptions = LayoutOptions.CenterAndExpand,
                 };
-                boutonSupprimer.Clicked += async (sender, args) => SupprimerPokemon(sender, args);
+                boutonSupprimer.Clicked += (sender, args) => SupprimerPokemon(sender, args);
                 Body.Children.Add(boutonSupprimer);
             };
+            HP_Bar.Progress = (pokemon.HP / 2.55) / 100;
+            Attack_Bar.Progress = (pokemon.Attack / 2.55) / 100;
+            Defense_Bar.Progress = (pokemon.Defense / 2.55) / 100;
+            SpeAtt_Bar.Progress = (pokemon.SpeDefense / 2.55) / 100;
+            SpeDef_Bar.Progress = (pokemon.SpeAttack / 2.55) / 100;
+            Speed_Bar.Progress = (pokemon.Speed / 2.55) / 100;
+
         }
         /* Procédure SupprimerPokemon
         ** Procésure appelée lors de l'appui sur le bouton supprimer.

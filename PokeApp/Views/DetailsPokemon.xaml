@@ -3,82 +3,99 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PokeApp.Views.DetailsPokemon"
              Title="DetailsPokemon">
-  <ContentPage.Content>
-      <StackLayout x:Name="Body">
-          <Label x:Name="Id" 
-                 Text="{Binding Id}"/>
-          <Label Text="{Binding Name}"/>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span FontAttributes="Bold"
-                              Text="Types : "/>
-                        <Span Text="{Binding Type1}"/>
-                        <Span Text=" "/>
-                        <Span Text="{Binding Type2}"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Image HeightRequest="150"
-                   HorizontalOptions="Start"
-                   WidthRequest="500"                
-                   Source="{Binding Image}"/>
-            <Label FontAttributes="Bold"
-                   Text="Statistiques de base :"/>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span FontAttributes="Bold"
-                              Text="HP : "/>
-                        <Span Text="{Binding HP}"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span FontAttributes="Bold"
-                              Text="Attaque : "/>
-                        <Span Text="{Binding Attack}"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span FontAttributes="Bold"
-                              Text="Defense : "/>
-                        <Span Text="{Binding Defense}"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span FontAttributes="Bold"
-                              Text="Attaque spéciale : "/>
-                        <Span Text="{Binding SpeAttack}"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span FontAttributes="Bold"
-                              Text="Défense spéciale : "/>
-                        <Span Text="{Binding SpeDefense}"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span FontAttributes="Bold"
-                              Text="Vitesse : "/>
-                        <Span Text="{Binding Speed}"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-        </StackLayout>
-  </ContentPage.Content>
+    <ContentPage.Content>
+        <ScrollView>
+             <StackLayout x:Name="Body">
+                <Image HeightRequest="150"
+                       HorizontalOptions="Start"
+                       Margin="0,10,0,0"
+                       WidthRequest="500"                
+                       Source="{Binding Image}"/>
+                <Label HorizontalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Pokémon n°"/>
+                            <Span x:Name="Id" 
+                                  Text="{Binding Id}"/>
+                            <Span Text=" - "/>
+                            <Span FontAttributes="Bold" 
+                                  Text="{Binding Name}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold" 
+                                  Text="{Binding Type1}"/>
+                            <Span Text=" "/>
+                            <Span FontAttributes="Bold"
+                                  Text="{Binding Type2}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold"
+                                  Text="HP : "/>
+                            <Span Text="{Binding HP}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <ProgressBar x:Name="HP_Bar" ProgressColor="LightGreen" Margin="20,0,20,0"/>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold"
+                                  Text="Attaque : "/>
+                            <Span Text="{Binding Attack}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <ProgressBar x:Name="Attack_Bar" ProgressColor="PaleVioletRed" Margin="20,0,20,0"/>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold"
+                                  Text="Defense : "/>
+                            <Span Text="{Binding Defense}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <ProgressBar x:Name="Defense_Bar" ProgressColor="Yellow" Margin="20,0,20,0"/>
+
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold"
+                                  Text="Attaque spéciale : "/>
+                            <Span Text="{Binding SpeAttack}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <ProgressBar x:Name="SpeAtt_Bar" ProgressColor="Orange" Margin="20,0,20,0"/>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold"
+                                  Text="Défense spéciale : "/>
+                            <Span Text="{Binding SpeDefense}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <ProgressBar x:Name="SpeDef_Bar" ProgressColor="DarkOrange" Margin="20,0,20,0"/>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold"
+                                  Text="Vitesse : "/>
+                            <Span Text="{Binding Speed}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <ProgressBar x:Name="Speed_Bar" ProgressColor="LightSkyBlue" Margin="20,0,20,0"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>
