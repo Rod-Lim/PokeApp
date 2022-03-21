@@ -43,7 +43,9 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <ProgressBar x:Name="HP_Bar" ProgressColor="LightGreen" Margin="20,0,20,0"/>
+                <ProgressBar x:Name="HP_Bar" 
+                             Margin="20,0,20,0"
+                             ProgressColor="LightGreen" />
                 <Label>
                     <Label.FormattedText>
                         <FormattedString>
@@ -53,7 +55,9 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <ProgressBar x:Name="Attack_Bar" ProgressColor="PaleVioletRed" Margin="20,0,20,0"/>
+                <ProgressBar x:Name="Attack_Bar" 
+                             Margin="20,0,20,0"
+                             ProgressColor="PaleVioletRed"/>
                 <Label>
                     <Label.FormattedText>
                         <FormattedString>
@@ -63,8 +67,9 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <ProgressBar x:Name="Defense_Bar" ProgressColor="Yellow" Margin="20,0,20,0"/>
-
+                <ProgressBar x:Name="Defense_Bar" 
+                             Margin="20,0,20,0"
+                             ProgressColor="Yellow"/>
                 <Label>
                     <Label.FormattedText>
                         <FormattedString>
@@ -74,7 +79,9 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <ProgressBar x:Name="SpeAtt_Bar" ProgressColor="Orange" Margin="20,0,20,0"/>
+                <ProgressBar x:Name="SpeAtt_Bar" 
+                             Margin="20,0,20,0"
+                             ProgressColor="Orange"/>
                 <Label>
                     <Label.FormattedText>
                         <FormattedString>
@@ -84,7 +91,9 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <ProgressBar x:Name="SpeDef_Bar" ProgressColor="DarkOrange" Margin="20,0,20,0"/>
+                <ProgressBar x:Name="SpeDef_Bar"
+                             Margin="20,0,20,0"
+                             ProgressColor="DarkOrange"/>
                 <Label>
                     <Label.FormattedText>
                         <FormattedString>
@@ -94,7 +103,9 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <ProgressBar x:Name="Speed_Bar" ProgressColor="LightSkyBlue" Margin="20,0,20,0"/>
+                <ProgressBar x:Name="Speed_Bar" 
+                             Margin="20,0,20,0"
+                             ProgressColor="LightSkyBlue"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
